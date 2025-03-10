@@ -19,18 +19,18 @@
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
                 }
-                console.log(response);
                 const html = await response.text();
-                displayResult(html);
+                displayFullHTML(html);
             } catch (error) {
                 console.error('There has been a problem with your fetch operation:', error);
             }
         }
 
-        // Function to display the full HTML in the page
-        function displayResult(html) {
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = html;
+        // Function to replace the entire document content with the fetched HTML
+        function displayFullHTML(html) {
+            document.open();
+            document.write(html);
+            document.close();
         }
 
         // Call the fetchFullHTML function when the page loads
