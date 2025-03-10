@@ -4,21 +4,28 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
     <script>
-        window.ivasMessengerSettings = {
-            token: "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc3BhY2VJZCI6IjY2YTFjMThmNWU0MDI1MjU3MzM5MTdlMiIsImlhdCI6MTcyMTg3Njg3OX0.kXvoTMzY2Ow_1MTNxUCzjC_3qXChNZ7MVN5ExaB11wcIeJ5C4AKAuHjzh_hr39h1fFTwJkS8iW3fjNr6X3ryR-vIrUgapMSkibV8Grc4ltPvrnjPJbmeyxhV8DDzH0prTeHasbHSJ9H7vfIiKtjx5JQinOi5yftp_N45oWyZgE3bRiySlt4bojAsSVhVTiHf4vQwnjk_SKezwlQkUy1MJFX3Rj9DrHLVh7CJhnkC2zLUuj9OOt30zb3E4dHlJrzgxtCHSadrQC0hNDHtZe8rSR9_W16ejMExZb7OkvHkH7XGZaj9g2bPgBYJMwF5_4_PIZicomIZj87R7Np93iw0jw",
-            domain: "https://messenger.ivastudio.verint.live",
-            port: "443",
-            onError: (error) => console.error("Something went wrong with the websockets for IVA Messenger", error)
-        };
-        !(function () {
-            function t() {
-                var t = document.createElement("script");
-                (t.type = "text/javascript"), (t.async = !0), (t.src = "https://messenger.ivastudio.verint.live:443/loader");
-                var e = document.getElementsByTagName("script")[0];
-                e.parentNode.insertBefore(t, e);
+        // Function to fetch full HTML from API
+        async function fetchFullHTML() {
+            try {
+                const response = await fetch('https://router.ivastudio.verint.live/ProxyScript/run/66a1c18f5e402525733917e2/current/mobile_snippet'); // Replace with your API URL
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                const html = await response.text();
+                displayResult(html);
+            } catch (error) {
+                console.error('There has been a problem with your fetch operation:', error);
             }
-            window.attachEvent ? window.attachEvent("onload", t) : window.addEventListener("load", t, !1);
-        })();
+        }
+
+        // Function to display the full HTML in the page
+        function displayResult(html) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = html;
+        }
+
+        // Call the fetchFullHTML function when the page loads
+        window.onload = fetchFullHTML;
     </script>
 </head>
 
