@@ -42,6 +42,23 @@
             background-color: #0056b3;
         }
     </style>
+<script>
+	window.ivasMessengerSettings = {
+		token: "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc3BhY2VJZCI6IjY3NWY5Y2MyZTkxZDY5ZTlhM2ZkOTU4MiIsImlhdCI6MTczNDMxOTI5OH0.U4ns1WnmR9F3rVYsj2iv6HnLehYkfVRp-2j-i2o7PLoAIvcSZgicD3ry4T_3f2UibqXdC9pNR13MM4i1nfzxKmGO2ZCwcP9P7mpuO3jDMM6zMip44uP8P4x43mhZpJg-JRN6I5g_O6jt5myI0-HzDhdnMfOw-K4pNX_ZAUvboJCMZRceIJ8ZZNu1XJsG-xglAfQ7e4eFx25xzXresdcFTyS4mVdJWW6j7bVYb5P0vAc-8Sfva7PlXqisUr7U4zXjVjS5t8kj9o0Rct_a2TZduiRCrPxxlhz7NXZB-WVTvjyPQMCvMjd4gWSYVeha7MxI9wl1u1cCE9T2cOrwbOAJIA",
+		domain: "https://messenger.ivastudio.verint.live",
+		port: "443",
+		onError: (error) => console.error("Something went wrong with the websockets for IVA Messenger", error)
+	};
+	!(function () {
+		function t() {
+			var t = document.createElement("script");
+			(t.type = "text/javascript"), (t.async = !0), (t.src = "https://messenger.ivastudio.verint.live:443/loader");
+			var e = document.getElementsByTagName("script")[0];
+			e.parentNode.insertBefore(t, e);
+		}
+		window.attachEvent ? window.attachEvent("onload", t) : window.addEventListener("load", t, !1);
+	})();
+</script>
 </head>
 <body>
     <div class="container">
