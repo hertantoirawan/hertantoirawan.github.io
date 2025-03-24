@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; child-src 'self' gap: data: https://youtu.be/ https://www.youtube.com https://www.google.com https://recaptcha.google.com https://ap-gateway.mastercard.com https://ap.gateway.mastercard.com https://nps.cx.starhub.com https://messenger.ivastudio.verint.live https://messenger-ui.ivastudio.verint.live; frame-src 'self' gap: data: https://youtu.be/ https://www.youtube.com https://www.google.com https://recaptcha.google.com https://ap-gateway.mastercard.com https://ap.gateway.mastercard.com https://nps.cx.starhub.com https://messenger.ivastudio.verint.live https://messenger-ui.ivastudio.verint.live; connect-src 'self' https://www.starhub.com https://cdn.perxtech.io https://starhubltd-dev1.outsystemsenterprise.com https://toolassets.haptikapi.com https://www.google-analytics.com https://singapore-preprod.hellohaptik.com wss://haptik-singapore-mqtt.hellohaptik.com wss://prod2-live-chat-mqtt.sprinklr.com https://prod2-live-chat.sprinklr.com https://live-chat-static.sprinklr.com https://*.ingest.sentry.io https://www.youtube.com https://ap-gateway.mastercard.com https://rum-ingest.us1.signalfx.com https://siteintercept.qualtrics.com https://messenger.ivastudio.verint.live https://messenger-ui.ivastudio.verint.live ws://*.ivastudio.verint.live:443 wss://*.ivastudio.verint.live:443; default-src 'self' gap: https://youtu.be/ www.youtube.com https://www.starhub.com https://messenger.ivastudio.verint.live https://messenger-ui.ivastudio.verint.live ws://*.ivastudio.verint.live:443 wss://*.ivastudio.verint.live:443 'unsafe-inline' 'unsafe-eval'; font-src 'self' data: https://fonts.gstatic.com https://toolassets.haptikapi.com https://use.fontawesome.com https://messenger.ivastudio.verint.live https://messenger-ui.ivastudio.verint.live; img-src 'self' data: https://www.starhub.com https://cdn.perxtech.io https://starhubltd-dev1.outsystemsenterprise.com https://toolassets.haptikapi.com https://prod2-sprcdn-assets.sprinklr.com https://braze-images.com https://haptik-singapore-haptikappimg.haptikapi.com https://siteintercept.qualtrics.com https://em16.verint.live https://i.postimg.cc blob:; script-src 'self' data: https://toolassets.haptikapi.com https://www.google-analytics.com https://prod2-live-chat.sprinklr.com https://live-chat-static.sprinklr.com https://www.google.com https://www.gstatic.com https://ap-gateway.mastercard.com https://www.googletagmanager.com https://cdn.signalfx.com https://static.queue-it.net https://assets.queue-it.net https://starhub.queue-it.net https://static.queue-it.net/script/queueconfigloader.min.js https://static.queue-it.net/script/queueclient.min.js https://siteintercept.qualtrics.com https://zn1brmscuuv7aexdw-starhubcx.siteintercept.qualtrics.com https://zn0ieyxczcnmemxac-starhubcx.siteintercept.qualtrics.com https://messenger.ivastudio.verint.live https://messenger-ui.ivastudio.verint.live https://unpkg.com https://cdn.jsdelivr.net 'unsafe-inline' 'unsafe-eval'; style-src 'self' https://toolassets.haptikapi.com https://fonts.googleapis.com https://use.fontawesome.com https://unpkg.com 'unsafe-inline'; ">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Landing Page</h1>
+        <p>We are glad to have you here. Explore our services and offerings.</p>
+        <a href="#" class="button">Get Started</a>
+    </div>
+</body>
+</html>
